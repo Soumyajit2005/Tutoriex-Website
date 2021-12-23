@@ -1,0 +1,17 @@
+.carousel_img{
+    z-index: -1 !important;
+    opacity: 0.855 !important;
+    height: 80vh !important;
+}
+.carousel_text{
+    font-size: 1.2rem !important;
+}
+.carousel_btn{
+    font-weight: bold !important;
+}
+.card_img{
+    height: 60vh !important;
+}
+.carousel-caption{
+    color: black !important;
+}
