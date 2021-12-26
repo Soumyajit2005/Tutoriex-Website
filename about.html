@@ -16,7 +16,7 @@
     <title>Tutoriex</title>
   </head>
   <body>
-    <header class="p-3 bg-dark text-white">
+    <header class="p-3 bg-dark text-white sticky-top" id="navbar">
       <div class="container">
         <div
           class="
@@ -36,18 +36,13 @@
             "
             target="_blank"
           >
-            <svg
+            <img
+              src="https://yt3.ggpht.com/ytc/AKedOLT9b1xTuI-sUXK8d46RuROX6N96fOHcqIYrI_dX=s88-c-k-c0x00ffffff-no-rj"
               class="bi me-2"
               width="40"
-              height="40"
-              role="img"
-              aria-label="Bootstrap"
-            >
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-            <img src="https://yt3.ggpht.com/ytc/AKedOLT9b1xTuI-sUXK8d46RuROX6N96fOHcqIYrI_dX=s88-c-k-c0x00ffffff-no-rj" class="bi me-2"
-            width="40"
-            height="32" alt="Tutoriex Logo">
+              height="32"
+              alt="Tutoriex Logo"
+            />
           </a>
 
           <ul
@@ -60,23 +55,42 @@
               mb-md-0
             "
           >
-            <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
-            <li><a href="courses.html" class="nav-link px-2 text-white">Courses</a></li>
+            <li>
+              <a href="index.html" class="nav-link px-2 text-secondary">Home</a>
+            </li>
+            <li>
+              <a href="courses.html" class="nav-link px-2 text-white"
+                >Courses</a
+              >
+            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Features
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Free Courses</a></li>
-                  <li><a class="dropdown-item" href="#">Get Guidence</a></li>
-                  <li><a class="dropdown-item" href="#">Others</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Blog</a></li>
-                  <li><a class="dropdown-item" href="#">FAQs</a></li>
-                </ul>
-              </li>
-            <li><a href="about.html" class="nav-link px-2 text-secondary">About</a></li>
-            <li><a href="contact.html" class="nav-link px-2 text-white">Contact</a></li>
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Features
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Free Courses</a></li>
+                <li><a class="dropdown-item" href="#">Get Guidence</a></li>
+                <li><a class="dropdown-item" href="#">Others</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">FAQs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link px-2 text-white">About</a>
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link px-2 text-white"
+                >Contact</a
+              >
+            </li>
           </ul>
 
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -92,16 +106,210 @@
             <button type="button" class="btn btn-outline-success me-2">
               Search
             </button>
-            <button type="button" class="btn btn-outline-light me-2">
+            <button
+              type="button"
+              class="btn btn-outline-danger me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
               Login
             </button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign-up
+            </button>
           </div>
         </div>
       </div>
     </header>
 
-    
+    <!--Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Login to Tutoriex
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your registered email address"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleInputPassword1"
+                  class="form-label"
+                  placeholder="Enter correct password"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Enter correct password"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Are you a current student of Tutoriex ?</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Create an account on Tutoriex
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your valid email address"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputUsername1" class="form-label"
+                  >User Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputUsername1"
+                  aria-describedby="UsernameHelp"
+                  placeholder="Enter your username"
+                />
+                <div id="UsernameHelp" class="form-text">
+                  Enter a valid Username
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Enter a strong password"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="cexampleInputPassword1" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                  placeholder="Enter the password again to confirm"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Are you a current student of Tutoriex ?</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
