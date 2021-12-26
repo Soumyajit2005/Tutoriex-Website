@@ -15,3 +15,6 @@
 .carousel-caption{
     color: black !important;
 }
+#myCarousel{
+    margin: 1vw;
+}
